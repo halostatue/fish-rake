@@ -14,7 +14,8 @@ function _halostatue_fish_rake_cache_completion -d 'Create rake completions'
         end
 
         set -l sed_pattern (string unescape 's/^rake \\\([-a-zA-Z0-9:_!]*\\\).*# \\\(.*\\\)/\\\1\t\\\2/')
-        $rake --silent --tasks --all 2>/dev/null | sed -e $sed_pattern >$cache_file
+        $rake --silent --tasks --all 2>/dev/null |
+          string replace -r --filter '^rake (\S+)\s+# (?:[^#]+# )?(.*)$' '$1\t$2' >$cache_file
     end
 
     cat $cache_file

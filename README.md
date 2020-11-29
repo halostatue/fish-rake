@@ -1,4 +1,4 @@
-# halostatue/fish-utils
+# halostatue/fish-rake
 
 Utility functions for [fish shell][]. Most have been ported from my zsh
 dotfiles.
@@ -10,7 +10,11 @@ dotfiles.
 Install with [Fisher][] (recommended):
 
 ```fish
-fisher add halostatue/fish-utils
+# Fisher 3.x
+fisher add halostatue/fish-rake
+
+# Fisher 4.0+
+fisher add halostatue/fish-rake
 ```
 
 <details>
@@ -18,8 +22,9 @@ fisher add halostatue/fish-utils
 
 ---
 
-Copy `functions/*.fish` and `conf.d/*.fish` to your fish configuration
+Copy `functions/*.fish` and `completions/*.fish` to your fish configuration
 directory preserving the directory structure.
+
 </details>
 
 ### System Requirements
@@ -34,8 +39,9 @@ directory preserving the directory structure.
 
 [MIT](LICENCE.md)
 
-[fish shell]: https://fishshell.com "friendly interactive shell"
-[Version]: https://img.shields.io/github/tag/halostatue/fish-kiex.svg?label=Version
+[fish shell]: https://fishshell.com 'friendly interactive shell'
+[version]: https://img.shields.io/github/tag/halostatue/fish-kiex.svg?label=Version
+
 [![Version][]]: https://github.com/halostatue/fish-kiex/releases
 [Fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
