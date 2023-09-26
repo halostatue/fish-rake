@@ -1,3 +1,5 @@
+# These completions are from https://github.com/halostatue/fish-rake
+
 function _halostatue_fish_rake_cache_completion -d 'Create rake completions'
     set -l cache_path /tmp/rake_completion/$USER
     mkdir -p $cache_path
@@ -15,7 +17,7 @@ function _halostatue_fish_rake_cache_completion -d 'Create rake completions'
 
         set -l sed_pattern (string unescape 's/^rake \\\([-a-zA-Z0-9:_!]*\\\).*# \\\(.*\\\)/\\\1\t\\\2/')
         $rake --silent --tasks --all 2>/dev/null |
-          string replace -r --filter '^rake (\S+)\s+# (?:[^#]+# )?(.*)$' '$1\t$2' >$cache_file
+            string replace -r --filter '^rake (\S+)\s+# (?:[^#]+# )?(.*)$' '$1\t$2' >$cache_file
     end
 
     cat $cache_file
