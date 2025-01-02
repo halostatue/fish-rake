@@ -1,35 +1,21 @@
 # halostatue/fish-rake
 
-Utility functions for [fish shell][]. Most have been ported from my zsh
-dotfiles.
+[Fish shell][Fish shell] completions for Rake to complete project tasks.
 
-[![Version][]][]
+[![Version][]][release]
 
 ## Installation
 
-Install with [Fisher][] (recommended):
+Install halostatue/fish-rake and [halostatue/fish-utils][fish-utils] with
+[fisher][fisher]:
 
 ```fish
-# Fisher 3.x
-fisher add halostatue/fish-rake
-
-# Fisher 4.0+
-fisher add halostatue/fish-rake
+fisher install halostatue/fish-utils@v4 halostatue/fish-rake@v1
 ```
-
-<details>
-<summary>Not using a package manager?</summary>
-
----
-
-Copy `functions/*.fish` and `completions/*.fish` to your fish configuration
-directory preserving the directory structure.
-
-</details>
 
 ### System Requirements
 
-- [fish][] 3.0+
+- [fish][fish] 3.2+
 
 ## Completions
 
@@ -41,7 +27,7 @@ directory preserving the directory structure.
 
 [fish shell]: https://fishshell.com 'friendly interactive shell'
 [version]: https://img.shields.io/github/tag/halostatue/fish-kiex.svg?label=Version
-
-[![Version][]]: https://github.com/halostatue/fish-kiex/releases
-[Fisher]: https://github.com/jorgebucaran/fisher
+[release]: https://github.com/halostatue/fish-kiex/releases
+[fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
+[fish-utils]: https://github.com/halostatue/fish-utils

@@ -1,4 +1,4 @@
-# These completions are from https://github.com/halostatue/fish-rake
+# @halostatue/fish-rake/completions/rake.fish
 
 function _halostatue_fish_rake_cache_completion -d 'Create rake completions'
     set -l cache_path /tmp/rake_completion/$USER
@@ -57,19 +57,3 @@ complete -c rake -s N -l no-search -l nosearch --description "Do not search pare
 complete -c rake -s s -l silent --description "Like --quiet, but also suppresses the 'in directory' announcement"
 complete -c rake -s g -l system --description "Using system wide (global) rakefiles (usually '~/.rake/*.rake')"
 complete -c rake -s G -l no-system -l nosystem --description "Use standard project Rakefile search paths, ignore system wide rakefiles"
-
-function _halostatue_fish_rake_uninstall -e halostatue_fish_rake_uninstall
-    set -l i (contains -i -- $GOROOT/bin $fish_user_paths)
-    and set -e fish_user_paths[$i]
-
-    set -l i (contains -i -- $GOPATH/bin $fish_user_paths)
-    and set -e fish_user_paths[$i]
-
-    set -Uq GOPATH
-    and set -e GOPATH
-
-    set -Uq GOROOT
-    and set -e GOROOT
-
-    functions -e (functions -a | command awk '/_halostatue_fish_rake_/')
-end
