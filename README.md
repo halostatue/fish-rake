@@ -1,8 +1,8 @@
 # halostatue/fish-rake
 
-[Fish shell][Fish shell] completions for Rake to complete project tasks.
+[Fish shell][shell] completions for Rake to complete project tasks.
 
-[![Version][]][release]
+[![Version][version]][release]
 
 ## Installation
 
@@ -15,17 +15,13 @@ fisher install halostatue/fish-utils@v4 halostatue/fish-rake@v1
 
 ### System Requirements
 
-- [fish][fish] 3.2+
-
-## Completions
-
-## Functions
+- [fish][fish] 3.4+
 
 ## License
 
 [MIT](LICENCE.md)
 
-[fish shell]: https://fishshell.com 'friendly interactive shell'
+[shell]: https://fishshell.com 'friendly interactive shell'
 [version]: https://img.shields.io/github/tag/halostatue/fish-kiex.svg?label=Version
 [release]: https://github.com/halostatue/fish-kiex/releases
 [fisher]: https://github.com/jorgebucaran/fisher

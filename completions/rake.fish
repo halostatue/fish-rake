@@ -1,21 +1,20 @@
-# @halostatue/fish-rake/completions/rake.fish
+# @halostatue/fish-rake/completions/rake.fish:v1.2.1
 
-function _halostatue_fish_rake_cache_completion -d 'Create rake completions'
-    set -l cache_path /tmp/rake_completion/$USER
+function _halostatue_fish_rake_cache_completion --description 'Create rake completions'
+    set --function cache_path /tmp/rake_completion/$USER
     mkdir -p $cache_path
-    set -l cache_file $cache_path/(md5pwd)
-    set -l files Rakefile rakefile rakefile.rb Rakefile.rb *.rake **/*.rake
-    set -l latest_rake (latest_modified_file $cache_file $files)
+    set --function cache_file $cache_path/(md5pwd)
+    set --function files Rakefile rakefile rakefile.rb Rakefile.rb *.rake **/*.rake
+    set --function latest_rake (latest_modified_file $cache_file $files)
 
     if test $latest_rake != $cache_file
-        set -l rake rake
+        set --local rake rake
         if test -e bin/rake
             set rake bin/rake
         else if test -f Gemfile
             set rake bundle exec rake
         end
 
-        set -l sed_pattern (string unescape 's/^rake \\\([-a-zA-Z0-9:_!]*\\\).*# \\\(.*\\\)/\\\1\t\\\2/')
         $rake --silent --tasks --all 2>/dev/null |
             string replace -r --filter '^rake (\S+)\s+# (?:[^#]+# )?(.*)$' '$1\t$2' >$cache_file
     end

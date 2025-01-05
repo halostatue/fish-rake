@@ -1,5 +1,13 @@
 # halostatue/fish-rake Changelog
 
+## 1.2.1 / 2025-01-05
+
+- Added version information to comment tags.
+- Switched to long flags where possible.
+- Switched to `set --function` instead of `set --local`.
+- Updated documentation.
+- Added tooling to the Justfile for easier release management.
+
 ## 1.2.0 / 2025-01-02
 
 - Removed an incorrect uninstall routine.
