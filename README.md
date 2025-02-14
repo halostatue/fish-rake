@@ -1,8 +1,8 @@
 # halostatue/fish-rake
 
-[Fish shell][shell] completions for Rake to complete project tasks.
+[![Version][version]](https://github.com/halostatue/fish-rake/releases)
 
-[![Version][version]][release]
+[Fish shell][shell] completions for Rake to complete project tasks.
 
 ## Installation
 
@@ -17,13 +17,22 @@ fisher install halostatue/fish-utils@v4 halostatue/fish-rake@v1
 
 - [fish][fish] 3.4+
 
-## License
+## Licence
 
-[MIT](LICENCE.md)
+[MIT](./LICENCE.md)
+
+## Change Log
+
+[CHANGELOG](./CHANGELOG.md)
+
+## Contributing
+
+- [Contributing](./CONTRIBUTING.md)
+- [Contributors](./CONTRIBUTORS.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 [shell]: https://fishshell.com 'friendly interactive shell'
-[version]: https://img.shields.io/github/tag/halostatue/fish-kiex.svg?label=Version
-[release]: https://github.com/halostatue/fish-kiex/releases
+[version]: https://img.shields.io/github/tag/halostatue/fish-rake.svg?label=Version
 [fisher]: https://github.com/jorgebucaran/fisher
 [fish]: https://github.com/fish-shell/fish-shell
 [fish-utils]: https://github.com/halostatue/fish-utils
