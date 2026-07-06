@@ -1,6 +1,7 @@
 # halostatue/fish-rake
 
 [![Version][version]](https://github.com/halostatue/fish-rake/releases)
+[![MIT](https://img.shields.io/badge/licence-MIT-blue?style=for-the-badge "MIT")](https://github.com/halostatue/fish-rake/blob/main/LICENCE.md)
 
 [Fish shell][shell] completions for Rake to complete project tasks.
 
